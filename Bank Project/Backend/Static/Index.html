@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="static/styles.css"> <!-- Updated path -->
+</head>
+<body>
+    <div class="container">
+        <h1>Banking System</h1>
+        
+        <div id="service-selection">
+            <h2>Select Service</h2>
+            <select id="service_type" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="create_account">Create Account</option>
+                <option value="deposit">Deposit</option>
+                <option value="withdraw">Withdraw</option>
+                <option value="delete_account">Delete Account</option>
+                <option value="check_balance">Check Balance</option>
+            </select>
+            <button id="select-service-button">Submit</button>
+        </div>
+
+        <div id="form-container" style="display: none;">
+            <div id="create-account-form" class="service-form" style="display: none;">
+                <h2>Create Account</h2>
+                <input type="text" id="account_number" placeholder="Account Number" required>
+                <select id="account_type" required>
+                    <option value="" disabled selected>Select Account Type</option>
+                    <option value="Savings">Savings</option>
+                    <option value="Checking">Checking</option>
+                    <option value="Business">Business</option>
+                </select>
+                <input type="text" id="customer_name" placeholder="Customer Name" required>
+                <input type="text" id="customer_phone" placeholder="Customer Phone" required>
+                <input type="number" id="customer_age" placeholder="Customer Age" required>
+                <input type="text" id="customer_address" placeholder="Customer Address" required>
+                <button type="submit" id="create-account-button">Create Account</button>
+                <button id="back-to-menu-button">Back to Main Menu</button>
+            </div>
+
+            <div id="deposit-container" class="service-form" style="display: none;">
+                <h2>Deposit</h2>
+                <input type="text" id="deposit_account_number" placeholder="Account Number" required>
+                <input type="number" id="deposit_amount" placeholder="Amount" required>
+                <button type="submit" id="deposit-button">Deposit</button>
+                <button id="back-to-menu-button">Back to Main Menu</button>
+            </div>
+
+            <div id="withdraw-container" class="service-form" style="display: none;">
+                <h2>Withdraw</h2>
+                <input type="text" id="withdraw_account_number" placeholder="Account Number" required>
+                <input type="number" id="withdraw_amount" placeholder="Amount" required>
+                <button type="submit" id="withdraw-button">Withdraw</button>
+                <button id="back-to-menu-button">Back to Main Menu</button>
+            </div>
+
+            <div id="delete-container" class="service-form" style="display: none;">
+                <h2>Delete Account</h2>
+                <input type="text" id="delete_account_number" placeholder="Account Number" required>
+                <button type="submit" id="delete-button">Delete Account</button>
+                <button id="back-to-menu-button">Back to Main Menu</button>
+            </div>
+
+            <div id="balance-inquiry" class="service-form" style="display: none;">
+                <h2>Balance Inquiry</h2>
+                <input type="text" id="inquiry_account_number" placeholder="Account Number" required>
+                <button type="submit" id="inquiry-button">Check Balance</button>
+                <p id="balance-result"></p>
+                <button id="back-to-menu-button">Back to Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script> <!-- Updated path -->
+</body>
+</html>
